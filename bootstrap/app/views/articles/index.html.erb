@@ -1,0 +1,17 @@
+<section class="container col-md-10 col-md-offset-2">
+
+<h1>Le blog minimaliste</h1>
+
+<h2>Liste des articles</h2>
+
+
+<ul>
+    <% @articles.each do |article| %>
+          <li><a href="/articles/<%= article.id %>"><%= article.title %></a></li>
+    <% end %>
+</ul>
+
+<br/>
+
+<%= paginate @articles %>
+</section>
